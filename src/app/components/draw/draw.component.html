@@ -1,0 +1,20 @@
+<div class="app-actions">
+
+    <button class="app-button" (click)="onUndo()">Undo</button>
+
+    <app-dropdown [items]="colors" (selectItem$)="onSelectingColor($event)"></app-dropdown>
+
+    <app-dropdown [items]="shapes" (selectItem$)="onSelectingShape($event)"></app-dropdown>
+
+</div>
+
+<div class="app-figure">
+
+    <ng-container *ngIf="figure | async as figure">
+
+        <app-figure [color]="figure.color" [shape]="figure.shape"></app-figure>
+
+    </ng-container>
+
+</div>
+

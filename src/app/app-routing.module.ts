@@ -1,10 +1,15 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {DrawComponent} from './components/draw/draw.component';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot([
+        {
+            path: '',
+            component: DrawComponent
+        }
+    ])],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

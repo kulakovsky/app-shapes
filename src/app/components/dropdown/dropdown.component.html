@@ -1,0 +1,5 @@
+<select class="app-dropdown" [(ngModel)]="item" id="item" (change)="onSelectItem();">
+
+    <option *ngFor="let item of items" [value]="item">{{item}}</option>
+
+</select>
